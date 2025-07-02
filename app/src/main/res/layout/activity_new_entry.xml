@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="New Journal Entry"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!-- Date -->
+        <TextView
+            android:id="@+id/entryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="8dp" />
+
+        <!-- Mood options -->
+        <TextView
+            android:text="How are you feeling today?"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:scrollbars="none">
+
+            <!-- Mood buttons: Use RadioGroup for single selection -->
+            <RadioGroup
+                android:id="@+id/moodGroup"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioHappy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@drawable/bg_radio_happy"
+                    android:padding="12dp"
+                    android:text="Happy"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/dot_happy"
+                    android:drawablePadding="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <RadioButton
+                    android:id="@+id/radioSad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@drawable/bg_radio_sad"
+                    android:text="Sad"
+                    android:drawableLeft="@drawable/dot_sad"
+                    android:drawablePadding="8dp"
+                    android:padding="12dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+
+
+                <RadioButton
+                    android:id="@+id/radioAngry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@drawable/bg_radio_angry"
+                    android:text="Angry"
+                    android:drawableLeft="@drawable/dot_angry"
+                    android:drawablePadding="8dp"
+                    android:padding="12dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Repeat similarly for radioAngry and radioExcited -->
+
+                <RadioButton
+                    android:id="@+id/radioNeutral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@drawable/bg_radio_neutral"
+                    android:padding="12dp"
+                    android:text="Neutral"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:drawableLeft="@drawable/dot_neutral"
+                    android:drawablePadding="8dp"
+                    android:layout_marginEnd="8dp"
+                    />
+
+
+                <RadioButton
+                    android:id="@+id/radioExcited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:background="@drawable/bg_radio_excited"
+                    android:text="Excited"
+                    android:drawableLeft="@drawable/dot_excited"
+                    android:drawablePadding="8dp"
+                    android:padding="12dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp" />
+            </RadioGroup>
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:text="Title"
+            android:textStyle="bold"
+            android:layout_marginTop="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Title Input -->
+        <EditText
+            android:id="@+id/entryTitle"
+            android:hint="Give your entry a title"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
+            android:minHeight="48dp"/>
+
+
+        <TextView
+            android:text="Journal Entry"
+            android:textStyle="bold"
+            android:layout_marginTop="23dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Journal Entry Text -->
+        <EditText
+            android:id="@+id/entryContent"
+            android:hint="Write your thoughts here..."
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="top"
+            android:background="@android:drawable/edit_text"
+            android:inputType="textMultiLine"
+            android:maxLines="5" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:text="Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:text="Save Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/design_default_color_on_secondary"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

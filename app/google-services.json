@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222135433397",
+    "project_id": "emotrackjournal",
+    "storage_bucket": "emotrackjournal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222135433397:android:a69e36ef834487a75fe6fc",
+        "android_client_info": {
+          "package_name": "com.example.emotrackjournal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBisVcsLRSZam8flA9S5Vj1owFVSZ7w8qQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
