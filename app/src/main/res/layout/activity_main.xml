@@ -13,6 +13,7 @@
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         app:mcv_showOtherDates="all"
         app:mcv_firstDayOfWeek="monday"
         app:mcv_selectionColor="@color/cardview_dark_background"
